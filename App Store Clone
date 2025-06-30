@@ -1,0 +1,126 @@
+import logo from './logo.svg';
+import './App.css';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+function App() {
+  const settings = {
+    dots: false,
+    infinite: false,
+    speed: 1000,
+    slidesToShow: 3,
+    slidesToScroll: 1
+  };
+  return (
+    <div className="m-auto">
+      <p className="mt-200 font-bold">
+        <h1>Store.</h1>
+        <h1>The best way to buy the products you love.</h1>
+      </p>
+      <div className="mt-50">
+        <Slider {...settings}>
+          {products.map((product, index) => (
+              <div className="h-125 w-125">
+                <img src={product.img} alt="" />
+              </div>
+          ))}
+        </Slider>
+      </div>
+      <div className="mt-100 font-bold">
+        <p>
+          <h1>The latest. Take a look at what’s new, right now.</h1>
+        </p>
+      </div>
+      <div className="mt-25">
+        <Slider {...settings}>
+          {latest.map((latest, index) => (
+              <div className="h-450 w-450">
+                <img src={latest.img} alt="" />
+              </div>
+          ))}
+        </Slider>
+      </div>
+      <p>
+        <h1>Help is here. Whenever and however you need it.</h1>
+      </p>
+    </div>
+  );
+}
+
+const products = [
+  {
+    img: '/ProductImages/Product1.png'
+  },
+  {
+    img: '/ProductImages/Product2.png'
+  },
+  {
+    img: '/ProductImages/Product3.png'
+  },
+  {
+    img: '/ProductImages/Product4.png'
+  },
+  {
+    img: '/ProductImages/Product5.png'
+  },
+  {
+    img: '/ProductImages/Product6.png'
+  },
+  {
+    img: '/ProductImages/Product7.png'
+  },
+  {
+    img: '/ProductImages/Product8.png'
+  },
+  {
+    img: '/ProductImages/Product9.png'
+  },
+  {
+    img: '/ProductImages/Product10.png'
+  },
+  {
+    img: '/ProductImages/Product11.png'
+  }
+]
+
+const latest = [
+  {
+    img: '/LatestImages/Iphone16Pro.png'
+  },
+  {
+    img: '/LatestImages/MacbookAir.png'
+  },
+  {
+    img: '/LatestImages/IpadAir.png'
+  },
+  {
+    img: '/LatestImages/LimitedTimeOffer.png'
+  },
+  {
+    img: '/LatestImages/WatchPE.png'
+  },
+  {
+    img: '/LatestImages/WatchS10.png'
+  },
+  {
+    img: '/LatestImages/Iphone16e.png'
+  },
+  {
+    img: '/LatestImages/Ipad.png'
+  },
+  {
+    img: '/LatestImages/MacStudio.png'
+  },
+  {
+    img: '/LatestImages/Iphone16.png'
+  },
+  {
+    img: '/LatestImages/WatchUltra2.png'
+  },
+  {
+    img: '/LatestImages/TrueColors.png'
+  }
+]
+
+export default App;
