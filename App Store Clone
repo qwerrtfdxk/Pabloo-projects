@@ -29,7 +29,8 @@ function App() {
       </div>
       <div className="mt-100 font-bold">
         <p>
-          <h1>The latest. Take a look at what’s new, right now.</h1>
+          <h1>The latest.</h1>
+          <h1>Take a look at what’s new, right now.</h1>
         </p>
       </div>
       <div className="mt-25">
@@ -41,9 +42,12 @@ function App() {
           ))}
         </Slider>
       </div>
-      <p>
-        <h1>Help is here. Whenever and however you need it.</h1>
-      </p>
+      <div className="mt-100 font-bold">
+        <p>
+          <h1>Help is here.</h1>
+          <h1>Whenever and however you need it.</h1>
+        </p>
+      </div>
     </div>
   );
 }
